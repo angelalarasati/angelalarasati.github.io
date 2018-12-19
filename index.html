@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+
+  <head>
+
+    <!-- ini dari aframe -->
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+    <!-- aframe -->
+
+    <!-- Include components after the A-Frame script, but before <a-scene>. -->
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+
+
+    <meta charset="utf-8">
+    <title> Hash Slinging Slasher </title>
+  </head>
+
+
+
+
+  <body>
+
+
+    <a-scene>
+
+          <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#ce5d7d"></a-box> -->
+
+
+
+
+
+          <a-sphere position="0 1.5 -5" radius="3.5" color="white" wireframe= "5">
+            <a-animation attribute="rotation"
+                           dur="5000"
+                           fill="backwards"
+                           to="180 360 30"
+                           repeat="indefinite"></a-animation>
+
+
+
+
+          </a-sphere>
+
+          <!-- dua -->
+
+          <a-sphere position="0 1.5 15" radius="3" color="white" wireframe= "5">
+            <a-animation attribute="rotation"
+                           dur="5000"
+                           fill="backwards"
+                           to="180 360 30"
+                           repeat="indefinite"></a-animation>
+
+
+
+
+          </a-sphere>
+<!-- <a-sphere position="0 1.5 -5" radius="0.5" color="#eec241"> </a-sphere> -->
+
+<!-- sphere dua  -->
+
+<a-sphere position="0 1.5 15" radius="0.5" color="#eec241"> </a-sphere>
+
+
+
+
+          <!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#5796d2"></a-cylinder> -->
+
+
+
+
+
+          <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7baf3f"></a-plane> -->
+
+
+
+
+          <a-torus-knot position="0 1.5 -5" color="#7baf3f" arc="180" p="2" q="7" radius="2" radius-tubular="0.1">
+
+          <a-animation attribute="rotation"
+                         dur="3000"
+                         fill="forwards"
+                         to="180 360 0"
+                         repeat="indefinite"></a-animation>
+
+         </a-torus-knot>
+
+         <!-- dua -->
+
+         <a-torus-knot position="0 1.5 15" color="#ce5d7d" arc="180" p="2" q="7" radius="1.5" radius-tubular="0.1">
+
+         <a-animation attribute="rotation"
+                        dur="3000"
+                        fill="forwards"
+                        to="180 360 0"
+                        repeat="indefinite"></a-animation>
+
+        </a-torus-knot>
+        <a-assets>
+ <a-asset-item id="brainstem" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
+</a-assets>
+
+<a-entity gltf-model="#brainstem" position="0 0 -5" scale="1.8 1.8 1.8">
+  <a-animation attribute="rotation"
+                 dur="3000"
+                 fill="both"
+                 to="360 180 0"
+                 repeat="indefinite"></a-animation></a-entity>
+
+          <a-entity particle-system="preset: snow; particleCount: 10000">
+            <a-animation attribute="rotation"
+                           dur="3000"
+                           fill="forwards"
+                           to="180 360 0"
+                           repeat="indefinite"></a-animation></a-entity>
+
+          <a-sky color="#34234c"></a-sky>
+
+
+        </a-scene>
+
+<p> coba one two three  four five six </p>
+
+  </body>
+
+
+
+
+
+</html>
